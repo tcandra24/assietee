@@ -1,0 +1,18 @@
+{
+  "id": "assietee",
+  "start_url": "./index.html",
+  "name": "List Restaurant",
+  "short_name": "List Restaurant",
+  "description": "List Restaurant for you",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#89b5af",
+  "icons": [
+    {
+      "src": "/icons/icon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
