@@ -22,6 +22,13 @@ img {
 .title {
   text-decoration: none;
   color: white;
+  font-size: 35px;
+  font-weight: bold;
+  display: block;
+}
+
+.restaurant__info h3, .restaurant__info h4 {
+  font-size: 30px;
 }
 
 .header__page {

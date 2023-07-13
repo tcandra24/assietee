@@ -1,7 +1,9 @@
-import Api from '../../../api/index';
+import Api from '../../api/index';
 
-import '../../../components/list-items';
-import '../../../components/single-item';
+import '../../components/list-items';
+import '../../components/single-item';
+
+import CONFIG from '../../config/index';
 
 class Restaurant {
   static async render() {
@@ -19,7 +21,7 @@ class Restaurant {
   static async afterRender() {
     const listItemsElement = document.querySelector('list-items');
 
-    const restaurants = await Api.fetchRestaurant('https://restaurant-api.dicoding.dev');
+    const restaurants = await Api.fetchRestaurant(CONFIG.API_URL);
     listItemsElement.items = restaurants;
   }
 }

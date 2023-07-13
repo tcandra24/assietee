@@ -1,10 +1,12 @@
-import Api from '../../../api/index.js';
-import UrlHelper from '../../../utils/url-helper.js';
-import '../../../components/detail-restaurant.js';
-import '../../../components/list-review.js';
-import '../../../components/single-review.js';
+import Api from '../../api/index';
+import UrlHelper from '../../utils/url-helper';
+import '../../components/detail-restaurant';
+import '../../components/list-review';
+import '../../components/single-review';
 
-import FavoriteInitiator from '../../../utils/favorite-initiator.js';
+import FavoriteInitiator from '../../utils/favorite-initiator';
+
+import CONFIG from '../../config/index';
 
 class Detail {
   static async render() {
@@ -19,7 +21,7 @@ class Detail {
     const DetailElement = document.querySelector('detail-restaurant');
 
     const url = UrlHelper.parseActiveUrlWithoutCombiner();
-    const restaurant = await Api.detailRestaurant('https://restaurant-api.dicoding.dev', url.id);
+    const restaurant = await Api.detailRestaurant(CONFIG.API_URL, url.id);
     DetailElement.item = restaurant;
 
     const ReviewElement = document.querySelector('list-review');

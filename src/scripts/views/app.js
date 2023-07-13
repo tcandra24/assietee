@@ -1,6 +1,6 @@
-import UrlHelper from '../../utils/url-helper';
-import routes from '../../routes/index';
-import DrawerInitiator from '../../utils/drawer-initiator';
+import UrlHelper from '../utils/url-helper';
+import routes from '../routes/index';
+import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
   constructor({ button, drawer, content }) {
@@ -24,6 +24,12 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const skipLinkElem = document.querySelector('.skip-to');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#content').focus();
+    });
   }
 }
 

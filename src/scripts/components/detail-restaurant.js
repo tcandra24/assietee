@@ -1,3 +1,5 @@
+import CONFIG from '../config/index';
+
 class DetailRestaurant extends HTMLElement {
   set item(value) {
     this._item = value;
@@ -11,16 +13,16 @@ class DetailRestaurant extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="detail__restaurant">
-        <h2 class="restaurant__title">${this._item.name}</h2> 
-        <img class="restaurant-detail__img" src="https://restaurant-api.dicoding.dev/images/large/${this._item.pictureId}" alt="${this._item.name}" />
+        <h2 class="restaurant__title" tabindex="0">${this._item.name}</h2> 
+        <img class="restaurant-detail__img" src="${CONFIG.IMAGE_URL}/large/${this._item.pictureId}" alt="${this._item.name}" />
         <div class="restaurant__info">
           <h3>Information</h3>
           <h4>Alamat</h4>
-          <p>${this._item.address}</p>
+          <p tabindex="0">${this._item.address}</p>
           <h4>Kota</h4>
-          <p>${this._item.city}</p>
+          <p tabindex="0">${this._item.city}</p>
           <h4>Deskripsi</h4>
-          <p>${this._item.description} </p>
+          <p tabindex="0">${this._item.description} </p>
           <br>
           <div class="list__menu">
             <div class="food__container">
