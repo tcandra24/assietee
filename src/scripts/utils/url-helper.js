@@ -24,6 +24,6 @@ class UrlHelper {
     + (splitedUrl.id ? '/:id' : '')
     + (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
   }
-};
+}
 
 export default UrlHelper;

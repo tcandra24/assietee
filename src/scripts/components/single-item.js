@@ -1,3 +1,5 @@
+import CONFIG from '../config/index';
+
 class SingleItem extends HTMLElement {
   set item(value) {
     this._item = value;
@@ -12,11 +14,11 @@ class SingleItem extends HTMLElement {
     this.innerHTML = `
     <article class="card" tabindex="0">
         <header class="card__header">
-            <div class="card__title" tabindex="0">
-                <h1><a class="title" href="/#/detail/${this._item.id}">${this._item.name}</a></h1>
+            <div class="card__title">
+                <h1 tabindex="0"><a class="title" href="/#/detail/${this._item.id}">${this._item.name}</a></h1>
             </div>
             <a class="title" href="/#/detail/${this._item.id}">
-              <img class="card__image" src="https://restaurant-api.dicoding.dev/images/small/${this._item.pictureId}" alt="${this._item.name}" tabindex="0">
+              <img class="card__image" src="${CONFIG.IMAGE_URL}/small/${this._item.pictureId}" alt="${this._item.name}" tabindex="0">
             </a>
         </header>
         <section class="card__body">

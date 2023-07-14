@@ -1,7 +1,7 @@
-import FavoriteRestaurant from '../../../data/favorite-restaurant';
+import FavoriteRestaurant from '../../data/favorite-restaurant';
 
-import '../../../components/list-items';
-import '../../../components/single-item';
+import '../../components/list-items';
+import '../../components/single-item';
 
 class Favorite {
   static async render() {
