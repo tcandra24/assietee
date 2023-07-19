@@ -16,8 +16,8 @@ class FavoriteRestaurant {
     return (await dbPromise).getAll(CONFIG.OBJECT_NAME);
   }
 
-  static async putRestaurant(movie) {
-    return (await dbPromise).put(CONFIG.OBJECT_NAME, movie);
+  static async putRestaurant(restaurant) {
+    return (await dbPromise).put(CONFIG.OBJECT_NAME, restaurant);
   }
 
   static async deleteRestaurant(id) {

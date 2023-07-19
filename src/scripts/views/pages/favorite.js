@@ -7,17 +7,24 @@ class Favorite {
   static async render() {
     return `
     <section class="content" id="main-content" tabindex="0" aria-label="Favorite Restaurant">
-        <h1> - Favorite Restaurant - </h1>
-      <list-items></list-items>
+      <h1> - Favorite Restaurant - </h1>
+      <div id="favorite-container">
+      </div>
     </section>   
     `;
   }
 
   static async afterRender() {
-    const listItemsElement = document.querySelector('list-items');
-
+    const FavoriteContainer = document.querySelector('#favorite-container');
     const restaurants = await FavoriteRestaurant.getAllRestaurants();
-    listItemsElement.items = restaurants;
+    if (restaurants.length > 0) {
+      const ListItemsElement = document.createElement('list-items');
+      FavoriteContainer.append(ListItemsElement);
+      const listItemsElement = document.querySelector('list-items');
+      listItemsElement.items = restaurants;
+    } else {
+      FavoriteContainer.innerHTML = "<div class='restaurant-not-found'>Tidak ada resto favorite</div>";
+    }
   }
 }
 

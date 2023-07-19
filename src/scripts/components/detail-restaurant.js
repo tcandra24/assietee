@@ -14,7 +14,7 @@ class DetailRestaurant extends HTMLElement {
     this.innerHTML = `
       <div class="detail__restaurant">
         <h2 class="restaurant__title" tabindex="0">${this._item.name}</h2> 
-        <img class="restaurant-detail__img" src="${CONFIG.IMAGE_URL}/large/${this._item.pictureId}" alt="${this._item.name}" />
+        <img class="restaurant-detail__img lazyload" src="${CONFIG.IMAGE_URL}/large/${this._item.pictureId}" alt="${this._item.name}" />
         <div class="restaurant__info">
           <h3>Information</h3>
           <h4>Alamat</h4>

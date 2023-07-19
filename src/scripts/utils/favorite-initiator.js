@@ -25,7 +25,7 @@ class FavoriteInitiator {
 
   static _renderLike() {
     this._favoriteButtonContainer.innerHTML = `
-    <button aria-label="like this movie" id="likeButton" class="like">
+    <button aria-label="fav resto" id="likeButton" tabindex="0" class="like">
       <i class="fa fa-heart-o" aria-hidden="true"></i>
     </button>`;
 
@@ -38,7 +38,7 @@ class FavoriteInitiator {
 
   static _renderLiked() {
     this._favoriteButtonContainer.innerHTML = `
-    <button aria-label="unlike this movie" id="likeButton" class="like">
+    <button aria-label="not fav resto" id="likeButton" tabindex="0" class="like">
       <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
     `;
