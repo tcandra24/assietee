@@ -18,7 +18,7 @@ class SingleItem extends HTMLElement {
                 <h1 tabindex="0"><a class="title" href="/#/detail/${this._item.id}">${this._item.name}</a></h1>
             </div>
             <a class="title" href="/#/detail/${this._item.id}">
-              <img class="card__image lazyload" src="${CONFIG.IMAGE_URL}/small/${this._item.pictureId}" alt="${this._item.name}" tabindex="0">
+              <img class="card__image lazyload" data-src="${CONFIG.IMAGE_URL}/small/${this._item.pictureId}" alt="${this._item.name}" tabindex="0">
             </a>
         </header>
         <section class="card__body">
